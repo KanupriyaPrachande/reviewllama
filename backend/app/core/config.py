@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     app_env: str = "development"
     log_level: str = "info"
 
-    gemini_api_key: str = "AQ.Ab8RN6KskIM-P3u-qX0k9zWKYU3MnWCWc1balslmw9F24yy9wQ"
+    gemini_api_key: str = ""
 
     github_token: str = ""
     github_webhook_secret: str = ""

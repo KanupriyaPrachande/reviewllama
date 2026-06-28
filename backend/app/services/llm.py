@@ -6,7 +6,7 @@ import httpx
 from app.models.schemas import CodeScore, DiffChunk, Finding, PRSummary
 
 _GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
-_API_KEY = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6KskIM-P3u-qX0k9zWKYU3MnWCWc1balslmw9F24yy9wQ")
+_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 
 def _build_diff_text(chunks: list[DiffChunk]) -> str:
