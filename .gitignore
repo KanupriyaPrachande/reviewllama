@@ -1,0 +1,34 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Env
+.env
+*.env.local
+
+# ML artifacts
+ml/data/*.jsonl
+ml/data/*.csv
+ml/training/output/
+*.bin
+*.safetensors
+*.pt
+
+# Node / dashboard
+dashboard/node_modules/
+dashboard/dist/
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+*.log
+
+# Database
+*.db
+
+# Trained model files
+*.joblib
