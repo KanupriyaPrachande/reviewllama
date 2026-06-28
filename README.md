@@ -35,26 +35,7 @@ reviewllama/
   dashboard/      React + Vite frontend
 ```
 
-## Setup (Day 1)
 
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate          # venv\Scripts\activate on Windows
-pip install -r requirements.txt --break-system-packages
-cp .env.example .env              # fill in GITHUB_TOKEN, DATABASE_URL, etc.
-uvicorn app.main:app --reload
-```
-
-API docs available at `http://localhost:8000/docs` once running.
-
-## Setup (Day 2 - dashboard)
-
-```bash
-cd dashboard
-npm install
-npm run dev
-```
 
 ## Status
 
