@@ -27,6 +27,6 @@ def on_startup() -> None:
     init_db()
 
 
-@app.get("/health")
+@app.get("/health")  # hi 
 def health() -> dict:
     return {"status": "ok", "env": settings.app_env, "version": "0.2.0"}
