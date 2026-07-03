@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from app.api.reviews import router as reviews_router
 from app.api.webhook import router as webhook_router
 from app.core.config import settings
@@ -22,11 +21,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(reviews_router)
+app.include_router(webhook_router)
+
+
 @app.on_event("startup")
 def on_startup() -> None:
     init_db()
 
 
-@app.get("/health")  # hi 
+@app.get("/health")
 def health() -> dict:
     return {"status": "ok", "env": settings.app_env, "version": "0.2.0"}
