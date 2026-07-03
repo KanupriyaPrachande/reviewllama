@@ -14,14 +14,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://reviewllama.vercel.app",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app.include_router(reviews_router)
-app.include_router(webhook_router)
-
 
 @app.on_event("startup")
 def on_startup() -> None:
