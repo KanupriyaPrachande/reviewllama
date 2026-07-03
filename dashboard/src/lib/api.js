@@ -1,4 +1,4 @@
-const BASE_URL = '/api'
+const BASE_URL = 'https://reviewllama-production.up.railway.app'
 
 const EMPTY_STATS = {
   prs_reviewed_today: 0,
