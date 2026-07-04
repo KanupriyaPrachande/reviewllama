@@ -27,7 +27,7 @@ export default function CodeReviewPanel() {
     if (!code.trim()) return
     setLoading(true); setResult(null); setError(null)
     try {
-      const res = await fetch('/api/reviews', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/reviews`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
