@@ -27,7 +27,7 @@ export default function CodeReviewPanel() {
     if (!code.trim()) return
     setLoading(true); setResult(null); setError(null)
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/reviews`, {
+      const res = await fetch('https://reviewllama-production.up.railway.app/reviews', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
