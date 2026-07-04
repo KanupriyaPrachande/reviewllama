@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const BASE = '/api'
+const BASE = 'https://reviewllama-production.up.railway.app'
 async function get(path) {
   try {
     const r = await fetch(BASE + path, { signal: AbortSignal.timeout(3000) })

@@ -16,7 +16,7 @@ export default function AlertsPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/reviews/alerts', { signal: AbortSignal.timeout(3000) })
+    fetch('https://reviewllama-production.up.railway.app/reviews/alerts', { signal: AbortSignal.timeout(3000) })
       .then(r => r.ok ? r.json() : [])
       .then(data => { setAlerts(data); setLoading(false) })
       .catch(() => setLoading(false))
